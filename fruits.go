@@ -6,7 +6,6 @@ func main() {
 	applecost := 5.99
 	pearcost := 7.0
 	wallet := 23.0
-	
 	fmt.Println("Одне яблуко коштує 5.99 грн. Ціна однієї груші - 7 грн. Ми маємо 23 грн.")
 	fmt.Println("______________")
 	fmt.Println("Питання перше:")
@@ -23,6 +22,10 @@ func main() {
 	fmt.Println("______________")
 	fmt.Println("Питання четверте:")
 	fmt.Println("Чи ми можемо купити 2 груші та 2 яблука?")
-	fmt.Printf("Дві груші та 2 яблука, котують %.2f. А в нас 23 гривні, отже нам не вистачить грошей", 2*applecost+2*pearcost)
+	if wallet >= 2*applecost+2*pearcost {
+		fmt.Printf("Дві груші та 2 яблука, котують %.2f. А в нас 23 гривні, отже нам вистачає грошей", 2*applecost+2*pearcost)
 
+	} else {
+		fmt.Printf("Дві груші та 2 яблука, котують %.2f. А в нас 23 гривні, отже нам не вистачає грошей", 2*applecost+2*pearcost)
+	}
 }
